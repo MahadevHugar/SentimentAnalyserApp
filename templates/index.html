@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: rgb(203, 219, 219);
+        }   
+        h1 {
+            font-weight: normal;
+            color: rgb(248, 16, 16);
+            text-align: start;
+            padding: 10px;
+            border: solid 1px red;
+            background: aliceblue;
+            margin: -8px -8px;
+                  
+                }
+                input[type="submit"] {
+                    width: 100px;
+                    padding: 5px 23px;
+                    color: black;
+                    font-size: 20px;
+                    background-color: #00e7ff;
+                    margin-top: 16px;
+                }
+                h2.output {
+                    font-size: 25px;
+                    margin-left:-5px;
+                }
+
+        form{
+            
+            font-weight: normal;
+            color:rgb(248, 16, 16);
+            text-align: start;
+            padding: 10px;
+            margin-left: -15px;
+        }
+        lable.lblsentence {
+            font-size: 26px;
+            color: darkblue;
+        }
+        textarea#text {
+            width: 530px;
+            height: 83px;
+            tex-align: justify;
+            font-size: 15px;
+          
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form method="post" action="/submit" >
+        <lable class="lblsentence">Enter sentence </lable><br />
+        <textarea id="text" name="sentence" >
+        </textarea>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    <h2 class="output"> 
+        {{message}} 
+    </h2>
+</body>
+</html>
