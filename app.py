@@ -1,44 +1,3 @@
-# from flask import Flask, render_template, request
-# import openai
-
-# app = Flask(__name__)
-
-
-# @app.route('/')
-# def main():
-#     return render_template('index.html')
-
-# @app.route('/submit', methods=['GET', 'POST'])
-# def submit():
-#     message=''
-#     if request.method == 'POST':
-#         sentence = request.form.get('sentence')
-#         openai.api_key = "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"
-#         def analyze_sentiment(prompt):
-#             completions = openai.Completion.create(
-#             engine="text-davinci-002",
-#             prompt=prompt[:4097],
-#             max_tokens=1024,
-#             stop=None,
-#             temperature=0.5,
-        
-#             )
-#             message = completions.choices[0].text
-#             return message
-#         message = analyze_sentiment("decide the sentiment whether it is positive or negetive or neutral. Sentence: "+sentence)
-#         return render_template('index.html', message=message)
-#     else:
-#         return render_template('index.html')
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
-
-
-
-
-
-
-
 from flask import Flask, render_template, request
 import openai
 
@@ -53,7 +12,7 @@ def submit():
     message=''
     if request.method == 'POST':
         sentence = request.form.get('sentence')
-        openai.api_key = "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"
+        openai.api_key = ("openai.api_key")
         def analyze_sentiment(prompt):
             chunks = [prompt[i:i+4096] for i in range(0, len(prompt), 4096)]
             completions = []
